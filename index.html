@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Trend - Lead The Change | Digital Marketing Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'electric-blue': '#0066ff',
+                        'cyber-purple': '#8b5cf6',
+                        'neon-green': '#00ff88',
+                        'sunset-orange': '#ff6b35',
+                        'deep-space': '#0a0a23',
+                        'cosmic-purple': '#1a0b3d',
+                        'aurora-pink': '#ff0080',
+                        'quantum-teal': '#00d4aa',
+                        'plasma-yellow': '#ffed4e',
+                        'void-black': '#000000'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'space': ['Space Grotesk', 'sans-serif']
+                    },
+                    animation: {
+                        'pulse-glow': 'pulse-glow 2s ease-in-out infinite alternate',
+                        'float': 'float 3s ease-in-out infinite',
+                        'gradient-shift': 'gradient-shift 4s ease-in-out infinite',
+                        'neon-pulse': 'neon-pulse 1.5s ease-in-out infinite alternate'
+                    }
+                }
+            }
+        }
+    </script>
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            background: linear-gradient(135deg, #0a0a23 0%, #1a0b3d 50%, #000000 100%);
+            background-attachment: fixed;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #00ff88 0%, #0066ff 50%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-shift 4s ease-in-out infinite;
+        }
+        
+        .neon-text {
+            color: #00ff88;
+            text-shadow: 0 0 5px #00ff88;
+        }
+        
+        .cyber-gradient {
+            background: linear-gradient(135deg, #0066ff 0%, #8b5cf6 50%, #ff0080 100%);
+            background-size: 200% 200%;
+            animation: gradient-shift 4s ease-in-out infinite;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes pulse-glow {
+            from { box-shadow: 0 0 5px rgba(0, 255, 136, 0.2); }
+            to { box-shadow: 0 0 15px rgba(0, 255, 136, 0.4); }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes gradient-shift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes neon-pulse {
+            from { 
+                text-shadow: 0 0 3px #00ff88;
+            }
+            to { 
+                text-shadow: 0 0 8px #00ff88;
+            }
+        }
+        
+        .hover-lift {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            background: rgba(26, 11, 61, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 255, 136, 0.3), 0 0 30px rgba(0, 102, 255, 0.2);
+            border-color: rgba(0, 255, 136, 0.6);
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+            color: #ffffff;
+            font-weight: 500;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background: linear-gradient(90deg, #00ff88, #0066ff);
+            transition: width 0.3s ease;
+            box-shadow: 0 0 5px rgba(0, 255, 136, 0.3);
+        }
+        
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        
+        .nav-link:hover,
+        .nav-link.active {
+            color: #00ff88;
+            text-shadow: 0 0 3px rgba(0, 255, 136, 0.4);
+        }
+        
+        .glow-button {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0066ff 0%, #00ff88 100%);
+            border: 2px solid transparent;
+            box-shadow: 0 0 10px rgba(0, 102, 255, 0.2);
+        }
+        
+        .glow-button:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.4), 0 10px 25px rgba(0, 102, 255, 0.3);
+            border-color: rgba(0, 255, 136, 0.6);
+        }
+        
+        .glow-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .glow-button:hover::before {
+            left: 100%;
+        }
+        
+        .stats-counter {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: rgba(26, 11, 61, 0.6);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stats-counter:hover {
+            transform: scale(1.1) rotateY(5deg);
+            box-shadow: 0 20px 40px rgba(0, 255, 136, 0.3);
+            border-color: rgba(0, 255, 136, 0.8);
+        }
+        
+        .testimonial-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: rgba(26, 11, 61, 0.8);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            backdrop-filter: blur(15px);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 255, 136, 0.4), 0 0 30px rgba(139, 92, 246, 0.3);
+            border-color: rgba(0, 255, 136, 0.8);
+        }
+        
+        .floating-element {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .cyber-card {
+            background: rgba(26, 11, 61, 0.7);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .cyber-card:hover {
+            border-color: rgba(0, 255, 136, 0.8);
+            box-shadow: 0 20px 40px rgba(0, 255, 136, 0.2);
+            transform: translateY(-8px);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .neon-border {
+            border: 2px solid transparent;
+            background: linear-gradient(rgba(26, 11, 61, 0.8), rgba(26, 11, 61, 0.8)) padding-box,
+                        linear-gradient(135deg, #00ff88, #0066ff, #8b5cf6) border-box;
+        }
+        
+        .text-glow {
+            text-shadow: 0 0 3px rgba(0, 255, 136, 0.3);
+        }
+
+        :root{
+      --primary:#6A5AE0;--accent:#00D1B2;--ink:#101828;--muted:#667085;--bg:#0B1220;--card:#111827;--ring:#A78BFA;--warning:#FFB020;--white:#FFFFFF
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,Segoe UI,Roboto,Apple Color Emoji,Noto Color Emoji,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--white)}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1200px,92vw);margin-inline:auto}
+    .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 1.2rem;border-radius:999px;font-weight:600;border:1px solid transparent;transition:.2s}
+    .btn.primary{background:linear-gradient(135deg,var(--primary),#8E7CFF);color:#fff;box-shadow:0 10px 30px rgba(106,90,224,.35)}
+    .btn.primary:hover{transform:translateY(-1px);box-shadow:0 14px 38px rgba(106,90,224,.45)}
+    .btn.ghost{border-color:#2B3245;background:rgba(255,255,255,.05)}
+    .pill{display:inline-block;padding:.35rem .75rem;border-radius:999px;background:rgba(0,209,178,.15);color:var(--accent);font-weight:600;border:1px solid rgba(0,209,178,.25)}
+    header{position:sticky;top:0;backdrop-filter:saturate(140%) blur(8px);background:rgba(11,18,32,.65);border-bottom:1px solid rgba(255,255,255,.06);z-index:30}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+    .brand{display:flex;align-items:center;gap:.65rem}
+    .logo{width:38px;height:38px;border-radius:10px;background:conic-gradient(from 210deg at 50% 50%,var(--accent),var(--primary),#B8F1FF,var(--accent));box-shadow:0 0 0 3px rgba(167,139,250,.25)}
+    .brand h1{font-size:1.1rem;letter-spacing:.3px;margin:0}
+    .nav a{font-weight:600;color:#E6E8EE;opacity:.9}
+    .nav ul{display:flex;gap:1.25rem;list-style:none;margin:0;padding:0}
+    .cta{display:flex;gap:.6rem}
+    .hero{position:relative;overflow:hidden}
+    .hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:2.5rem;align-items:center;padding:6.5rem 0 4.5rem}
+    h2.display{font-size:clamp(2rem,4.5vw,3.8rem);line-height:1.05;margin:.25rem 0 .75rem}
+    .sub{font-size:1.05rem;color:#D2D6E9;opacity:.9}
+    section{padding:4.5rem 0;border-bottom:1px solid rgba(255,255,255,.06)}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:1rem;margin-bottom:2rem}
+    .section-head h3{margin:0;font-size:clamp(1.4rem,2.6vw,2rem)}
+    .section-head p{color:#C6CBDD;max-width:620px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:1.2rem;transition:.2s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(106,90,224,.18)}
+    .showcase{display:grid;grid-template-columns:1.2fr .8fr;gap:1.2rem}
+    footer{padding:2.8rem 0;color:#C6CBDD}
+
+
+    </style>
+</head>
+<body class="font-space bg-deep-space text-white">
+    <!-- Header / Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-deep-space/95 backdrop-blur-lg border-b border-neon-green/30 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 cyber-gradient rounded-xl flex items-center justify-center floating-element">
+                        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-white">Global Trend</div>
+                        <div class="text-xs text-neon-green font-medium">Lead The Change</div>
+                    </div>
+                </div>
+                
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#home" class="nav-link active font-medium text-white">Home</a>
+                    <a href="#services" class="nav-link font-medium text-white">Our Services</a>
+                    <a href="#testimonials" class="nav-link font-medium text-white">Testimonials</a>
+                    <a href="#blogs" class="nav-link font-medium text-white">Our Blogs</a>
+                    <a href="#contact" class="nav-link font-medium text-white">Contact Us</a>
+                    <a href="#about" class="nav-link font-medium text-white">About Us</a>
+                </div>
+                
+                <button class="lg:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen relative pt-20 overflow-hidden">
+        <div class="absolute inset-0 cyber-gradient opacity-20"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-deep-space/90 via-cosmic-purple/80 to-void-black/95"></div>
+        <div class="max-w-7xl mx-auto px-6 py-20 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center min-h-[80vh]">
+                <div class="fade-in">
+                    <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-6">
+                        <span class="text-white text-glow">Skyrocket Your Brand with</span>
+                        <br />
+                        <span class="gradient-text">Proven Tactics</span>
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-10 leading-relaxed max-w-xl">
+                        Boost your brand with data-driven marketing that drives results. Transform your business with our expert digital marketing solutions.
+                    </p>
+                    
+                    <button class="glow-button text-white px-10 py-5 rounded-xl font-bold text-xl">
+                        🚀 Schedule a call with us
+                    </button>
+                </div>
+                
+                <div class="fade-in relative">
+                    <div class="relative">
+                        <!-- Cyber Marketing Visual -->
+                        <div class="w-96 h-96 mx-auto relative floating-element">
+                            <div class="absolute inset-0 cyber-gradient rounded-full opacity-30 animate-pulse-glow"></div>
+                            <div class="absolute inset-8 neon-border rounded-full flex items-center justify-center backdrop-filter backdrop-blur-lg">
+                                <svg class="w-32 h-32 text-neon-green" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating Cyber Elements -->
+                        <div class="absolute -top-4 -left-8 w-20 h-20 cyber-card rounded-2xl flex items-center justify-center floating-element">
+                            <div class="text-3xl">📈</div>
+                        </div>
+                        <div class="absolute -top-8 -right-4 w-20 h-20 cyber-card rounded-2xl flex items-center justify-center floating-element" style="animation-delay: 0.5s;">
+                            <div class="text-3xl">🎯</div>
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 w-20 h-20 cyber-card rounded-2xl flex items-center justify-center floating-element" style="animation-delay: 1s;">
+                            <div class="text-3xl">💡</div>
+                        </div>
+                        <div class="absolute -bottom-8 -right-8 w-20 h-20 cyber-card rounded-2xl flex items-center justify-center floating-element" style="animation-delay: 1.5s;">
+                            <div class="text-3xl">🚀</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services -->
+    <section id="services" class="py-20 relative">
+        <div class="absolute inset-0 bg-gradient-to-br from-cosmic-purple/30 to-deep-space/90"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6 neon-text">
+                    How our Growth Marketing Solutions Help Your Business Scale
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="hover-lift p-8 rounded-2xl">
+                    <div class="w-16 h-16 cyber-gradient rounded-xl flex items-center justify-center mb-6 floating-element">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white text-glow">Digital Marketing Services</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Comprehensive digital marketing strategies that drive engagement, conversions, and sustainable growth for your business.
+                    </p>
+                </div>
+                
+                <div class="hover-lift p-8 rounded-2xl">
+                    <div class="w-16 h-16 bg-gradient-to-br from-electric-blue to-cyber-purple rounded-xl flex items-center justify-center mb-6 floating-element">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white text-glow">Creative Website Design</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Beautiful, responsive websites that convert visitors into customers with stunning design and seamless user experience.
+                    </p>
+                </div>
+                
+                <div class="hover-lift p-8 rounded-2xl">
+                    <div class="w-16 h-16 bg-gradient-to-br from-neon-green to-quantum-teal rounded-xl flex items-center justify-center mb-6 floating-element">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white text-glow">Search Engine Optimization (SEO)</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Boost your organic visibility and drive qualified traffic with our proven SEO strategies and techniques.
+                    </p>
+                </div>
+                
+                <div class="hover-lift p-8 rounded-2xl">
+                    <div class="w-16 h-16 bg-gradient-to-br from-cyber-purple to-aurora-pink rounded-xl flex items-center justify-center mb-6 floating-element">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white text-glow">Digital Marketing Consultancy</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Expert guidance and strategic planning to optimize your marketing efforts and maximize ROI across all channels.
+                    </p>
+                </div>
+                
+                <div class="hover-lift p-8 rounded-2xl">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sunset-orange to-plasma-yellow rounded-xl flex items-center justify-center mb-6 floating-element">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white text-glow">Copy Writing</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Compelling copy that converts, from website content to ad campaigns that resonate with your target audience.
+                    </p>
+                </div>
+                
+                <div class="hover-lift p-8 rounded-2xl">
+                    <div class="w-16 h-16 bg-gradient-to-br from-aurora-pink to-electric-blue rounded-xl flex items-center justify-center mb-6 floating-element">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white text-glow">Google Ads</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Targeted Google Ads campaigns that deliver immediate results and maximize your advertising budget effectively.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 relative">
+        <div class="absolute inset-0 bg-gradient-to-br from-void-black/80 via-cosmic-purple/60 to-deep-space/90"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-8 gradient-text">Why Choose Us</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4 cyber-card p-4 rounded-xl">
+                            <div class="w-10 h-10 cyber-gradient rounded-full flex items-center justify-center flex-shrink-0 mt-1 floating-element">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 neon-text">We Understand Small Businesses</h3>
+                                <p class="text-gray-300">Tailored solutions that fit your budget and scale with your growth.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4 cyber-card p-4 rounded-xl">
+                            <div class="w-10 h-10 cyber-gradient rounded-full flex items-center justify-center flex-shrink-0 mt-1 floating-element">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 neon-text">Clear, Honest Communication</h3>
+                                <p class="text-gray-300">Transparent reporting and regular updates on your campaign performance.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4 cyber-card p-4 rounded-xl">
+                            <div class="w-10 h-10 cyber-gradient rounded-full flex items-center justify-center flex-shrink-0 mt-1 floating-element">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 neon-text">Personalised Approach</h3>
+                                <p class="text-gray-300">Custom strategies designed specifically for your industry and goals.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4 cyber-card p-4 rounded-xl">
+                            <div class="w-10 h-10 cyber-gradient rounded-full flex items-center justify-center flex-shrink-0 mt-1 floating-element">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 neon-text">Flexible and Affordable</h3>
+                                <p class="text-gray-300">Competitive pricing with flexible packages that deliver real value.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4 cyber-card p-4 rounded-xl">
+                            <div class="w-10 h-10 cyber-gradient rounded-full flex items-center justify-center flex-shrink-0 mt-1 floating-element">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 neon-text">Expertise You Can Trust</h3>
+                                <p class="text-gray-300">Proven track record with measurable results across various industries.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-8">
+                    <div class="stats-counter text-center">
+                        <div class="text-4xl font-bold neon-text mb-2">$26.9M+</div>
+                        <div class="text-gray-300 font-medium">Raised in Funding</div>
+                    </div>
+                    <div class="stats-counter text-center">
+                        <div class="text-4xl font-bold neon-text mb-2">$4.2M+</div>
+                        <div class="text-gray-300 font-medium">Ad Spend Managed</div>
+                    </div>
+                    <div class="stats-counter text-center col-span-2">
+                        <div class="text-4xl font-bold neon-text mb-2">Since 2017</div>
+                        <div class="text-gray-300 font-medium">Years of Experience</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem + Solution Highlights -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="hover-lift bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-2xl border border-red-200">
+                    <div class="w-16 h-16 bg-red-500 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-navy-900">Evolving Digital Market Demands</h3>
+                    <p class="text-gray-600 mb-6 text-sm">Struggling to keep up with changing digital trends and consumer behavior?</p>
+                    <button class="glow-button text-white px-6 py-3 rounded-lg text-sm font-bold">
+                        🔥 Solve the problem
+                    </button>
+                </div>
+                
+                <div class="hover-lift p-8 rounded-2xl">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sunset-orange to-plasma-yellow rounded-xl flex items-center justify-center mb-6 floating-element">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white text-glow">Technology Integration Hurdles</h3>
+                    <p class="text-gray-300 mb-6 text-sm">Finding it difficult to integrate new marketing technologies effectively?</p>
+                    <button class="glow-button text-white px-6 py-3 rounded-lg text-sm font-bold">
+                        ⚡ Solve the problem
+                    </button>
+                </div>
+                
+                <div class="hover-lift p-8 rounded-2xl">
+                    <div class="w-16 h-16 bg-gradient-to-br from-electric-blue to-cyber-purple rounded-xl flex items-center justify-center mb-6 floating-element">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white text-glow">Complex Business Processes</h3>
+                    <p class="text-gray-300 mb-6 text-sm">Overwhelmed by complex marketing processes and data analysis?</p>
+                    <button class="glow-button text-white px-6 py-3 rounded-lg text-sm font-bold">
+                        💡 Solve the problem
+                    </button>
+                </div>
+                
+                <div class="hover-lift p-8 rounded-2xl">
+                    <div class="w-16 h-16 bg-gradient-to-br from-neon-green to-quantum-teal rounded-xl flex items-center justify-center mb-6 floating-element">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white text-glow">Achieving Sustainable Growth</h3>
+                    <p class="text-gray-300 mb-6 text-sm">Need help creating long-term growth strategies that actually work?</p>
+                    <button class="glow-button text-white px-6 py-3 rounded-lg text-sm font-bold">
+                        🚀 Solve the problem
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-black">
+                    See what our Happy Customers Say About Us
+                </h2>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="testimonial-card bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-teal-primary to-teal-dark rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold text-xl">ER</span>
+                        </div>
+                        <div>
+                            <div class="font-bold text-navy-900">Emily R.</div>
+                            <div class="text-gray-600">Marketing Manager at GreenLeaf Co.</div>
+                        </div>
+                    </div>
+                    <blockquote class="text-xl text-gray-700 leading-relaxed mb-6">
+                        "Their expertise transformed our online presence! The team's strategic approach and attention to detail exceeded our expectations. Our organic traffic increased by 120%, and leads doubled within just three months of working with them."
+                    </blockquote>
+                    <div class="flex text-yellow-400">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blogs Section -->
+    <section id="blogs" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-navy-900">
+                    Insights & Strategies – Stay Ahead in Digital Marketing
+                </h2>
+                <p class="text-xl text-gray-600">See our Latest Blogs</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <article class="hover-lift bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-teal-primary to-teal-dark flex items-center justify-center">
+                        <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-navy-900">The Ultimate Guide to SEO in 2025</h3>
+                        <p class="text-gray-600 mb-4">Master the latest SEO techniques and algorithm updates to dominate search rankings this year.</p>
+                        <a href="#" class="text-teal-primary font-medium hover:text-teal-dark transition-colors">View Blog →</a>
+                    </div>
+                </article>
+                
+                <article class="hover-lift bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-navy-900">7 Proven Google Ads Strategies for Maximum ROI</h3>
+                        <p class="text-gray-600 mb-4">Discover advanced Google Ads tactics that deliver exceptional returns on your advertising investment.</p>
+                        <a href="#" class="text-teal-primary font-medium hover:text-teal-dark transition-colors">View Blog →</a>
+                    </div>
+                </article>
+                
+                <article class="hover-lift bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-navy-900">Crafting High-Converting Landing Pages That Sell</h3>
+                        <p class="text-gray-600 mb-4">Learn the psychology and design principles behind landing pages that convert visitors into customers.</p>
+                        <a href="#" class="text-teal-primary font-medium hover:text-teal-dark transition-colors">View Blog →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Us Section -->
+<section id="about" class="py-20 relative">
+  <div class="absolute inset-0 bg-gradient-to-br from-cosmic-purple/30 to-deep-space/90"></div>
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl lg:text-5xl font-bold mb-6 gradient-text">About Us</h2>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+        At Global Trend, we combine creativity, strategy, and cutting-edge technology 
+        to empower businesses and help them lead the change in the digital era.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="hover-lift p-8 rounded-2xl">
+        <h3 class="text-2xl font-bold mb-4 text-white text-glow">Who We Are</h3>
+        <p class="text-gray-300 leading-relaxed">
+          A passionate team of marketers, designers, and strategists committed to building 
+          digital solutions that make an impact.
+        </p>
+      </div>
+      <div class="hover-lift p-8 rounded-2xl">
+        <h3 class="text-2xl font-bold mb-4 text-white text-glow">Our Vision</h3>
+        <p class="text-gray-300 leading-relaxed">
+          To become a trusted global partner in driving growth through 
+          innovation, creativity, and meaningful digital experiences.
+        </p>
+      </div>
+      <div class="hover-lift p-8 rounded-2xl">
+        <h3 class="text-2xl font-bold mb-4 text-white text-glow">Our Values</h3>
+        <p class="text-gray-300 leading-relaxed">
+          Innovation, integrity, and collaboration guide everything we do, ensuring 
+          lasting value for our clients and their customers.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <!-- FAQ / Contact Prompt -->
+    <section class="py-20 bg-teal-primary">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-white">
+                Still have questions? Let's chat...
+            </h2>
+            <p class="text-xl text-teal-100 mb-10 leading-relaxed">
+                Ready to transform your digital presence? Book a free consultation and discover how we can help your business grow.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="glow-button bg-white text-teal-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100">
+                    Book a free consultation
+                </button>
+                <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-teal-primary transition-all duration-300">
+                    Contact us today
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Subscription -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-6 text-navy-900">Contact Us</h2>
+                <p class="text-xl text-gray-600">Stay updated with our latest insights and strategies</p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-navy-900">Get in Touch</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Name</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-primary focus:border-transparent" placeholder="Your name">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Email*</label>
+                                <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-primary focus:border-transparent" placeholder="your@email.com" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-primary focus:border-transparent" placeholder="Tell us about your project..."></textarea>
+                            </div>
+                            <button type="submit" class="glow-button bg-teal-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-dark w-full">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-navy-900">Subscribe to Our Newsletter</h3>
+                        <p class="text-gray-600 mb-6">Get the latest digital marketing tips and strategies delivered to your inbox.</p>
+                        <form class="space-y-4">
+                            <div>
+                                <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-primary focus:border-transparent" placeholder="Email*" required>
+                            </div>
+                            <button type="submit" class="glow-button bg-teal-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-dark w-full">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-teal-primary to-teal-dark rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="text-xl font-bold text-white">Global Trend</div>
+                            <div class="text-xs text-teal-primary font-medium">Lead The Change</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Transforming businesses through innovative digital marketing solutions and proven growth strategies.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-teal-primary transition-colors">Home</a></li>
+                        <li><a href="#services" class="hover:text-teal-primary transition-colors">Our Services</a></li>
+                        <li><a href="#testimonials" class="hover:text-teal-primary transition-colors">Testimonials</a></li>
+                        <li><a href="#blogs" class="hover:text-teal-primary transition-colors">Our Blogs</a></li>
+                        <li><a href="#contact" class="hover:text-teal-primary transition-colors">Contact Us</a></li>
+                        <li><a href="#about" class="hover:text-teal-primary transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-teal-primary transition-colors">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Recent Projects</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-teal-primary transition-colors">Gaming Accessories Webpage</a></li>
+                        <li><a href="#" class="hover:text-teal-primary transition-colors">Flower Shop Webpage</a></li>
+                        <li><a href="#" class="hover:text-teal-primary transition-colors">Tech Startup Landing Page</a></li>
+                        <li><a href="#" class="hover:text-teal-primary transition-colors">E-commerce Platform</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Follow Us</h4>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-teal-primary transition-colors">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-teal-primary transition-colors">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-teal-primary transition-colors">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-teal-primary transition-colors">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.097.118.112.221.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24c6.624 0 11.99-5.367 11.99-11.987C24.007 5.367 18.641.001.012.001z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 by Global Trend. All rights reserved. Leading the change in digital marketing.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Active navigation highlighting
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Form submissions
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const button = this.querySelector('button[type="submit"]');
+                const originalText = button.textContent;
+                button.textContent = 'Sending...';
+                button.disabled = true;
+                
+                setTimeout(() => {
+                    button.textContent = 'Message Sent!';
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                        button.disabled = false;
+                        this.reset();
+                    }, 2000);
+                }, 1000);
+            });
+        });
+
+        // Stats counter animation
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.text-4xl');
+                    statNumbers.forEach(stat => {
+                        const finalValue = stat.textContent;
+                        if (finalValue.includes('$') || finalValue.includes('Since')) {
+                            return; // Skip animation for these
+                        }
+                        
+                        const numericValue = parseInt(finalValue.replace(/\D/g, ''));
+                        const suffix = finalValue.replace(/\d/g, '');
+                        
+                        let currentValue = 0;
+                        const increment = numericValue / 50;
+                        
+                        const timer = setInterval(() => {
+                            currentValue += increment;
+                            if (currentValue >= numericValue) {
+                                stat.textContent = finalValue;
+                                clearInterval(timer);
+                            } else {
+                                stat.textContent = Math.floor(currentValue) + suffix;
+                            }
+                        }, 30);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe stats section
+        const statsSection = document.querySelector('.grid.grid-cols-2.gap-8');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'979d8da826e49a81',t:'MTc1Njk4OTYwNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
